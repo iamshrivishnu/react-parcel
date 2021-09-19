@@ -1,0 +1,23 @@
+{
+  "name": "react-parcel",
+  "version": "1.0.0",
+  "description": "React Package with Parcel Bundler",
+  "main": "./public/index.html",
+  "scripts": {
+    "start": "parcel \"./public/index.html\" --open -p 3000",
+    "build": "parcel build \"./public/index.html\" --out-dir build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shrivishnu",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
+    "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "@types/react": "^17.0.21",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
