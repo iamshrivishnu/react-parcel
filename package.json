@@ -1,23 +1,42 @@
 {
   "name": "react-parcel",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "React Package with Parcel Bundler",
-  "main": "./public/index.html",
   "scripts": {
-    "start": "parcel \"./public/index.html\" --open -p 3000",
-    "build": "parcel build \"./public/index.html\" --out-dir build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "ncc build ./index.ts -w -o dist/",
+    "release": "ncc build ./index.ts -o ./dist/ --minify --no-cache --no-source-map-register"
   },
   "author": "Shrivishnu",
   "license": "MIT",
-  "devDependencies": {
-    "@babel/preset-env": "^7.15.6",
-    "@babel/preset-react": "^7.14.5",
-    "parcel-bundler": "^1.12.5"
+  "bin": {
+    "react-parcel": "./dist/index.js"
   },
-  "dependencies": {
-    "@types/react": "^17.0.21",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  }
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/cross-spawn": "^6.0.2",
+    "@types/node": "^16.10.3",
+    "@types/validate-npm-package-name": "^3.0.3",
+    "@vercel/ncc": "^0.31.1",
+    "chalk": "^4.1.2",
+    "commander": "^8.2.0",
+    "cpy": "^8.1.2",
+    "cross-spawn": "^7.0.3",
+    "typescript": "^4.4.3",
+    "validate-npm-package-name": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamshrivishnu/react-parcel.git"
+  },
+  "keywords": [
+    "react",
+    "parcel"
+  ],
+  "bugs": {
+    "url": "https://github.com/iamshrivishnu/react-parcel/issues"
+  },
+  "homepage": "https://github.com/iamshrivishnu/react-parcel#readme",
+  "dependencies": {}
 }
